@@ -52,5 +52,5 @@ Key fingerprint is a short sequence of bytes used to identify a longer key. It c
 ```
 43:51:43:a1:b5:fc:8b:b7:0a:3a:a9:b1:0f:66:73:a8 <your_username>@<host_name>
 ```
-Since it is not easy for humans to validate this complicated fingerprint, it is better to make it easy to understand by visualizing it.
+Since it is not easy for humans to validate this complicated fingerprint, it is better to make it easy to understand by visualizing it. So, key's randomart image simply visualize the fingerprint with a certain manner.
 
