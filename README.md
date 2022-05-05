@@ -21,7 +21,7 @@ Then, you will be asked for a password.
 ```
 Enter passphrase (empty for no passphrase):
 ```
-You can again just hit enter and not give it a password. It doesn't mean that your connection will be unsecure but an extra precaution. This password will be asked while you're trying to make connection using this key.
+You can again just hit enter and not give it a password. It doesn't mean that your connection will be unsecure but an extra precaution. This password will be asked by your local client while you're trying to make connection using this key.
 
 You should confirm your password.
 ```
@@ -54,3 +54,23 @@ Key fingerprint is a short sequence of bytes used to identify a longer key. It c
 ```
 Since it is not easy for humans to validate this complicated fingerprint, it is better to make it easy to understand by visualizing it. So, key's randomart image simply visualize the fingerprint with a certain manner.
 
+## How to connect to a server using SSH
+Once you've got the keys, you need to provide your public key to the server that wou want to connect to.
+
+If you want to see your keys, you can go to `.ssh` directory using the following command: 
+```
+cd /home/<your_username>/.ssh
+``` 
+There you can use `ls` to see your keys. There should be two files named **id_rsa** and **id_rsa.pub**.
+
+You can use the `cat` command to see the content of these files. For instance, you can see the content of your public key by entering:
+```
+cat /home/<your_username>/.ssh/id_rsa.pub
+```
+In order to connect to a server, you should give your public key to the server. In this way, server can decypher your encryption. However, you shouldn't be sharing your private key (**id_rsa**) with anybody! Once somebody got your private key, they can act like you and harm your work.
+
+After that, you can connect to the server as an user or root.
+```
+ssh <username>@<server_address>
+```
+It is not necessary to use a username. Instead, you can just type the server's ip address if client's name is same as one of the users in the server. 
