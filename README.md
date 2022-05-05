@@ -69,7 +69,7 @@ cat /home/<your_username>/.ssh/id_rsa.pub
 ```
 In order to connect to a server, you should give your public key to the server. In this way, server can decypher your encryption. However, you shouldn't be sharing your private key (**id_rsa**) with anybody! Once somebody got your private key, they can act like you and harm your work.
 
-After that, you can connect to the server as an user or root.
+After you add your public key to **authorized_keys on server**, you can connect to the server as an user or root.
 ```
 ssh <username>@<server_address>
 ```
